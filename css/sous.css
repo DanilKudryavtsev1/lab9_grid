@@ -1,0 +1,233 @@
+* {
+    font-family: 'Jost', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    /* color: black; */
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 120px 1fr 120px;
+
+}
+
+header {
+    grid-column: 1/13;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 100px;
+    align-items: center;
+}
+
+header > a {
+    margin-left: 40px;
+}
+
+.btn {
+    height: 50px;
+    width: 180px;
+    background: #F3F3F3;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.btn img {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background: rgb(255, 251, 188);
+}
+
+.buttons {
+    /* max-width: 600px; */
+    display: grid;
+    /* grid-template-columns: minmax(0px, 180px) minmax(0px, 180px) minmax(0px, 180px); */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px;
+    column-gap: 20px;
+    justify-self: end;
+}
+
+.footer {
+    height: 120px;
+    width: 100%;
+    background: #F3F3F3;
+    align-self: end;
+    display: flex;
+    align-items: center;
+    grid-column: 1/13;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.white {
+    background: #fff;
+    width: 70px;
+    transform: scale(-1, 1);
+    
+}
+
+.footer a {
+    margin-left: 40px;
+}
+
+
+main {
+    grid-column: 1/13;
+    grid-row: 2/3;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+main > p {
+    font-size: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+main div {
+    position: relative;
+    height: 400px;
+    width: 800px;
+    background: #9F171F;
+    border-radius: 40px;
+    justify-self: center;
+}
+
+main img {
+    position: absolute;
+    height: 400px;
+    top: 0;
+    right: -50px;
+}
+
+main > div > p {
+    width: 550px;
+    color: #fff;
+    font-size: 30px;
+    padding-top: 40px;
+    margin-left: 40px;
+    justify-self: center;
+}
+
+.list {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    z-index: 10;
+}
+
+@media screen and (max-width:1000px){
+    main > p {
+        font-size: 30px;
+    }
+    
+    main div {
+        height: 300px;
+        width: 600px;
+    }
+    
+    main img {
+        position: absolute;
+        height: 300px;
+        top: 0;
+        right: -50px;
+    }
+    
+    main > div > p {
+        width: 420px;
+        color: #fff;
+        font-size: 25px;
+        padding-top: 20px;
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width:750px){
+    header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: center;
+    }
+
+    header a {
+        grid-row: 1/2;
+        justify-self: center;
+        margin: 0;
+    }
+
+    .buttons {
+        /* max-width: 600px; */
+        grid-row: 2/3;
+        display: grid;
+        column-gap: 20px;
+        justify-self: center;
+    }
+
+    .btn:not(.white) {
+        width: 130px;
+        height: 40px;
+    }
+    
+    main > p {
+        font-size: 22px;
+    }
+
+    main div {
+        height: 350px;
+        width: 400px;
+        border-radius: 40px;
+    }
+    
+    main img {
+        height: 350px;
+    }
+    
+    main > div > p {
+        padding-top: 20px;
+        margin-left: 20px;
+        width: 200px;
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .btn:not(.white){
+        height: 30px;
+        width: 100px;
+    }
+
+    main > p {
+        font-size: 15px;
+    }
+
+    main div {
+        height: 200px;
+        width: 250px;
+        border-radius: 40px;
+    }
+    
+    main img {
+        height: 200px;
+    }
+    
+    main > div > p {
+        padding-top: 5px;
+        margin-left: 20px;
+        width: 125px;
+        font-size: 12px;
+    }
+
+}
